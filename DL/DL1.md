@@ -178,5 +178,21 @@ L2正则化减少了权重的固定比例（求导为$w_i$的正比），使权�
 
 
 
-### 防止指数上溢
+### softmax防止指数上溢工程化实现(2024.9.8)
+
+参考：[万字秋招算法岗深度学习八股文大全 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/667048896)
+
+# $softmax(x) = \frac{e^{x_i}}{\sum_ie^{x_i}} = \frac{e^{x_i-a}}{\sum_ie^{x_i-a}}$
+
+（使$a$为$x_i$中的最大值）
+
+
+
+### 常用优化器
+
+参考：[万字秋招算法岗深度学习八股文大全 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/667048896)
+
+#### SGD (2024.9.9)
+
+
 
