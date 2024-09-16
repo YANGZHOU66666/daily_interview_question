@@ -28,3 +28,10 @@
 
 `Dropout`是一种正则化技术，通过随机丢弃一部分网络连接，可以有效减少模型的过拟合，增强模型的泛化能力。
 
+
+
+### Transformer模型中自注意力机制的数学表达式是什么？(2024.9.16)
+
+参考：[大模型-Transformer 面试八股文，简单背一背 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/689965833)
+
+自注意力机制的数学表达式可以表示为：$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$其中，`Q`、`K`和V分别代表查询（query）、键（key）和值（value）矩阵， dk 是键向量的维度。此表达式通过将查询和键的点积除以 $d_k$ 进行缩放，然后应用 $softmax$ 函数来获取权重，最后这些权重用于值向量的加权求和。
