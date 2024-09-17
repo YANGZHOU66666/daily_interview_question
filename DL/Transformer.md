@@ -35,3 +35,12 @@
 参考：[大模型-Transformer 面试八股文，简单背一背 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/689965833)
 
 自注意力机制的数学表达式可以表示为：$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V$其中，`Q`、`K`和V分别代表查询（query）、键（key）和值（value）矩阵， dk 是键向量的维度。此表达式通过将查询和键的点积除以 $d_k$ 进行缩放，然后应用 $softmax$ 函数来获取权重，最后这些权重用于值向量的加权求和。
+
+
+
+### 多头注意力机制如何在数学上被实现，它如何改进自注意力机制的性能？(2024.9.17)
+
+参考：[大模型-Transformer 面试八股文，简单背一背 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/689965833)
+
+多头注意力机制首先将`Q`、`K`、`V`通过不同的线性变换映射到不同的表示空间，然后在每个表示空间上独立地应用自注意力机制，最后将所有头的输出拼接并再次线性变换得到最终输出。数学上，设有h个头，对于第i个头，$Head_i=Attention(QW_i^Q,KW_i^K,VW_i^V)$最终输出为：$MultiHead(Q,K,V)=Concat(Head_1,...,Head_h)W^O$这种方式能够使模型在不同的子空间捕捉到序列的不同特征，从而提高性能。
+
