@@ -287,3 +287,22 @@ $ \hat{r_t} = \frac{r_t}{1-\lambda^n}$
 最后更新参数：
 
 $ w ← w - \frac{η}{\sqrt{\hat{r_t}+δ}}·\hat{v_n}$
+
+
+
+
+
+
+
+### ROC曲线、AUC(2024.9.20)
+
+参考：[【小萌五分钟】机器学习 | 模型评估: ROC曲线与AUC值_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1wz4y197LU/?spm_id_from=333.337.search-card.all.click&vd_source=73e54c2ac162fbf942d5792a881e18b2)
+
+$ TPR = \frac{TP}{P}=\frac{TP}{TP+FN}$
+
+$FPR=\frac{FP}{N}=\frac{FP}{FP+TN}$
+
+ROC曲线：横坐标为FPR，纵坐标为TPR
+
+AUC：ROC曲线下的面积，越大分类效果越好
+
