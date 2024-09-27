@@ -85,3 +85,9 @@ Layer Normalization的目的是对每个样本的所有特征进行，数学上�
 ### Transformer模型训练中的梯度裁剪是如何数学定义的，它为何重要？(2024.9.26)
 
 梯度裁剪通过设定一个阈值$\theta$，将梯度向量$g$裁剪为：$g′=min(1,\frac{θ}{‖g‖}) g$。这样做是为了防止在训练过程中出现梯度爆炸问题，确保模型的稳定训练。
+
+
+
+### 为何Transformer 模型中采用 Layer Normalization 而非 Batch Normalization？(2024.9.27)
+
+Layer Normalization 对每个样本独立进行归一化，适用于序列化数据和变长输入，而 Batch Normalization 在批处理时对特征进行归一化，不适用于序列长度变化的情况。
