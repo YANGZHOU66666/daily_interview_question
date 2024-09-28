@@ -91,3 +91,9 @@ Layer Normalization的目的是对每个样本的所有特征进行，数学上�
 ### 为何Transformer 模型中采用 Layer Normalization 而非 Batch Normalization？(2024.9.27)
 
 Layer Normalization 对每个样本独立进行归一化，适用于序列化数据和变长输入，而 Batch Normalization 在批处理时对特征进行归一化，不适用于序列长度变化的情况。
+
+
+
+### Transformer 模型如何处理过拟合问题？(2024.9.28)
+
+处理过拟合的方法包括使用 dropout 技术、增加数据集的大小、采用正则化技术以及使用早停法等。
